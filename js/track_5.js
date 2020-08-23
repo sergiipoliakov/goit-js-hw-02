@@ -2,6 +2,22 @@
 
 const checkForSpam = function (message) {
   // твой код
+
+  let words = message.split(' ');
+  for (const word of words) {
+    const isInLowerCaseWord = word.toLowerCase();
+
+    if (isInLowerCaseWord.includes('spam')) {
+      message = true;
+      break;
+    } else if (isInLowerCaseWord.includes('sale')) {
+      message = true;
+      break;
+    }
+    message = false;
+  }
+
+  return message;
 };
 
 /*
@@ -15,24 +31,25 @@ console.log(checkForSpam('Get best sale offers now!')); // true
 
 console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
 
+// Автопроверка домашних заданий по JavaScript
 
+// Задача 5 / 9
 
-
-
+// Модуль: 2
 
 // function checkForSpam(str) {
 //     'use strict';
 //     // Write code under this line
 //     let words = str.split(' ');
-  
+
 //     const wordToFind = 'sale';
 //     const wordToFind2 = 'spam';
 //     let message = '';
-  
+
 //     for (const word of words) {
 //       // console.log(word);
 //       const isLowerCase = word.toLowerCase();
-    
+
 //       console.log(isLowerCase);
 //       if (isLowerCase.includes(wordToFind)) {
 //         message = true;
@@ -41,19 +58,18 @@ console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
 //         message = true;
 //         break;
 //       }
-      
+
 //      message = false;
 //     }
 //     // console.log(isLowerCase);
 //     // console.log(message);
 //     return message;
 //   }
-  
+
 //   console.log(checkForSpam('Latest technology spam news sale')); // false
-  
+
 //   console.log(checkForSpam('JavaScript weekly newsletter')); // false
-  
+
 //   console.log(checkForSpam('Get best sale offers  now!')); // true
-  
+
 //   console.log(checkForSpam('[SPAM] How to  earn fast money?')); // true
-  

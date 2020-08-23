@@ -20,6 +20,12 @@ console.log(logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']));
 
 logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 
+// Автопроверка домашних заданий по JavaScript
+// Задача 1 / 9
+
+// Модуль:
+// 2
+
 // const getItemsString = function (array) {
 //   'use strict';
 //   // Write code under this line
