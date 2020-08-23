@@ -30,9 +30,7 @@ const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
 const isLoginValid = function (login) {
   // твой код
-  const min = 4;
-  const max = 16;
-  return min <= login.length && login.length <= max;
+  return 4 <= login.length && login.length <= 16;
 };
 
 const isLoginUnique = function (allLogins, login) {
@@ -64,3 +62,57 @@ console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен 
 console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 
 console.log(logins);
+
+// Автопроверка домашних заданий по JavaScript
+
+// Задача 9 / 9
+// Модуль: 2
+
+// function isLoginValid(login, min = 4, max = 16) {
+//   // Write code under this line
+//   return min <= login.length && login.length <= max;
+// }
+
+// function isLoginUnique(allLogins, login) {
+//   'use strict';
+//   // Write code under this line
+
+//   return allLogins.includes(login) ? false : true;
+// }
+
+// function addLogin(allLogins, login) {
+//   'use strict';
+//   const SUCCESS = 'Логин успешно добавлен!';
+//   const REFUSAL = 'Такой логин уже используется!';
+//   const ERROR = 'Ошибка! Логин должен быть размером от 4 до 16 символов';
+//   let message;
+//   // Write code under this line
+
+//   if (isLoginValid(login) !== true) {
+//     // console.log(login);
+//     message = ERROR;
+//   } else if (isLoginUnique(allLogins, login) !== true) {
+//     message = REFUSAL;
+//     // console.log(login);
+//   } else {
+//     allLogins.push(login);
+//     message = SUCCESS;
+//     // console.log(login);
+//   }
+//   return message;
+// }
+// // console.log(isLoginValid);
+// const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+
+// console.log(addLogin(logins, 'Ajax'));
+// // 'Логин успешно добавлен!'
+
+// console.log(addLogin(logins, 'robotGoogles'));
+// // 'Такой логин уже используется!'
+
+// console.log(addLogin(logins, 'Zod'));
+// // 'Ошибка! Логин должен быть от 4 до 16 символов'
+
+// console.log(addLogin(logins, 'jqueryisextremelyfast'));
+// // 'Ошибка! Логин должен быть от 4 до 16 символов'
+// console.log(logins);

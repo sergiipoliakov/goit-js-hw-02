@@ -9,36 +9,49 @@ let input;
 const numbers = [];
 let total = 0;
 
-input = prompt("Введите число", "только число");
-Number(input);
-while (input) {
+const addNumbers = function () {
+  input = prompt('Введите число', 'только число');
+  Number(input);
+  while (input) {
     if (isNaN(input)) {
-      input = prompt("Было введено не число, попробуйте еще раз");
+      input = prompt('Было введено не число, попробуйте еще раз');
     } else {
-      total += Number(input);
-      input = prompt("Введите число", "только число");
+      numbers.push(Number(input));
+      input = prompt('Введите число', 'только число');
     }
   }
-  alert(`Общая сумма чисел равна: ${total}`);
+  for (const number of numbers) {
+    total += number;
+  }
+  console.log(numbers);
+  console.log(`Общая сумма чисел равна: [${total}]`);
+  alert(`Общая сумма чисел равна: [${total}]`);
 
+  return total;
+};
+addNumbers();
 
+// Автопроверка домашних заданий по JavaScript
 
+// Задача 6 / 9
+
+// Модуль: 2
 
 //   function mapArray(array) {
 //     'use strict';
-   
+
 //     const numbers = [];
 //     console.log( new Array(array.length));
 //     for(let i = 0; i < array.length; i += 1) {
 //       // Write code under this line
-//       console.log(array[i] * 10); 
+//       console.log(array[i] * 10);
 //       numbers.push(array[i] * 10);
 //     }
 //     return numbers;
 //   }
-  
+
 //   console.log(mapArray([-2, 0, 2, ]));
 //   // [-20, 0, 20]
-  
+
 //   console.log(mapArray([-2.5, 0, 2.5]));
 //   // [-25, 0, 25]
